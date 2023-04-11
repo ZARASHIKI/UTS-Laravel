@@ -18,10 +18,13 @@
           <th scope="ps-1">Action</th>
       </tr>
   </thead>
+  @php
+    $num =1;
+  @endphp
   @foreach ($mahasiswas as $mahasiswa)
   <tbody>
       <tr>
-          <th>{{$mahasiswa->id}}</th>
+          <th>{{$num++}}</th>
           <td>{{$mahasiswa->nim}}</td>
           <td>{{$mahasiswa->nama}}</td>
           <td>{{$mahasiswa->alamat}}</td>
