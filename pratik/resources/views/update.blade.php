@@ -11,7 +11,7 @@
 <body><table class="table">
   <thead>
       <tr>
-          <th scope="col">Id</th>
+          <th scope="col">#</th>
           <th scope="col">Nim</th>
           <th scope="col">Nama</th>
           <th scope="col">Alamat</th>
