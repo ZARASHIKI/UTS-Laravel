@@ -10,13 +10,6 @@ class Mahasiswacontrol extends Controller
     function index (){
         return view("home",["mahasiswas" => mahasiswa::all()]);
     }
-    public function edit($id){
-        $ubah = mahasiswa::find($id);
-        return view("update",compact('ubah'),["mahasiswas" => mahasiswa::all()]);
-    }
-    public function tambah(){
-        return view('newadd',["mahasiswas" => mahasiswa::all()]);
-    }
     public function store(Request $request)
     {
         $tambah = new Mahasiswa;
@@ -48,7 +41,6 @@ class Mahasiswacontrol extends Controller
     {
         $hapus = Mahasiswa::find($id);
         $hapus->delete();
- 
         return redirect('/')->with('success','Data Dihapus');
     }
 }

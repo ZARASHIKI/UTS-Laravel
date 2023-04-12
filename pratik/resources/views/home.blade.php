@@ -1,3 +1,4 @@
+@extends('update')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
                     <td>{{$mahasiswa->nama}}</td>
                     <td>{{$mahasiswa->alamat}}</td>
                 <td style="display: flex;">
-                    <a href="{{url('update',$mahasiswa->id)}}"><button type="button" style="margin-right: 20px" class="btn btn-secondary">Ubah</button></a>
+                    <a href="#edit{{$mahasiswa->id}}" data-bs-toggle="modal"><button type="button"   style="margin-right: 20px" class="btn btn-secondary">Ubah</button></a>
                     <form action="{{ url('delete', $mahasiswa->id) }}" method="POST">
                         {{ csrf_field() }}
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda ingin Menghapus Ini?')">Hapus</button>
@@ -71,5 +72,7 @@
       </div>
     </div>
   </div>
+  {{-- Edit data --}}
+  
 </body>
 </html>
