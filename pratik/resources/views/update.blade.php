@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="{{url('change',$mahasiswa->id)}}" method="post">
           {{ csrf_field() }}
         <div class="mb-3">
           <label for="nim" class="form-label"><h5>Nim</h5></label>

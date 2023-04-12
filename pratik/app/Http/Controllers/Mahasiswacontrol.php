@@ -19,7 +19,7 @@ class Mahasiswacontrol extends Controller
         $tambah->alamat = $request->alamat;
         $tambah->save();
  
-        return redirect('/')->with('toast_success','Data Ditambahkan');
+        return redirect('/')->with('success','Data Ditambahkan');
     }
     public function change(Request $request,$id)
     {
@@ -30,12 +30,12 @@ class Mahasiswacontrol extends Controller
         $tambah->alamat = $request->alamat;
         $tambah->save();
  
-        return redirect('/')->with('toast_success','Data Ditambahkan');
+        return redirect('/')->with('success','Data Berhasil Di Update');
     }
     public function hapuse($id)
     {
         $hapus = Mahasiswa::find($id);
         $hapus->delete();
-        return redirect('/')->with('success','Data Dihapus');
+        return redirect('/')->with('success','Data Berhasil Dihapus');
     }
 }
