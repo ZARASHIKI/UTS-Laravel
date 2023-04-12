@@ -32,11 +32,6 @@ class Mahasiswacontrol extends Controller
  
         return redirect('/')->with('toast_success','Data Ditambahkan');
     }
-    public function delete($id)
-    {
-        $del = mahasiswa::find($id);
-        return view("Delete",compact("del"),["mahasiswas" => mahasiswa::all()]);
-    }
     public function hapuse($id)
     {
         $hapus = Mahasiswa::find($id);
